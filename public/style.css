@@ -89,7 +89,7 @@ body {
 
 
 .content__itm {
-   margin-top: 45px;
+   margin-top: 65px;
    background-color: white;
    border-radius: 9px;
    padding: 7px;
@@ -115,6 +115,8 @@ body {
    padding: 17px 19px ;
    font-size: 17px;
    border: none;
+   display: flex;
+   align-items: center;
    color: white;
    background-color: #7371fc;
    font-weight: 500;
@@ -136,8 +138,9 @@ body {
 .dropdown-content li  a {
    text-decoration: none;
    font-size: 17px;
-   color: #1055F8;
+   color: #3d3d3d;
    font-weight: 500;
+   font-family: 'Quicksand',sans-serif;
    padding: 0 5px;
 }
 
@@ -228,6 +231,22 @@ body {
 }
 
 
+/*  index */
+
+.heading-text {
+   font-family: 'Quicksand',sans-serif;
+}
+
+.heading-text p {
+   font-weight: 500;
+}
+
+
+.video-download-box {
+   display: flex;
+   justify-content: center;
+}
+
 
 
 
@@ -263,6 +282,35 @@ body {
    text-align: center;
 }
 
+.ad-box {
+   height: 995px;
+   width: 115px;
+}
+
+.seo-section {
+   display: flex;
+   align-items: center;
+   padding: 25px 15px;
+}
+
+.heading-text {
+   padding: 0 75px;
+}
+
+
+.table-content {
+   border-collapse: collapse;
+   max-width: 455px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 25px 0;
+}
+
+.table-content td, th {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 7px;
+ }
 
 
 @media screen and (max-width: 480px) {
@@ -302,6 +350,21 @@ body {
    .btn-submit {
       max-width: 115px;
       padding: 12px ;
+   }
+
+   .seo-section {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .seo-section div {
+      width: 90%;
+   }
+
+   .seo-img {
+      width: 255px;
    }
 
    .footer {
@@ -352,3 +415,56 @@ body {
       display: none;
    }
  }
+
+
+
+
+/* CSS */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+
+.responsive_img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}

@@ -15,7 +15,10 @@
                <a href="#" class="logo">Download-From</a>
                <div class="dropdowns">
                   <div class="dropdown">
-                     <button class="drop-btn">Instagram Tools</button>
+                     <button class="drop-btn">
+                        <p>Instagram Tools</p>
+                        <img src="/arrow.svg" alt="down arrow icon image">
+                     </button>
                      <ul class="dropdown-content">
                         <li>
                            <a href="#">Story Downloader</a>
@@ -29,7 +32,10 @@
                      </ul>
                   </div>
                   <div class="dropdown">
-                     <button class="drop-btn">Youtube Tools</button>
+                     <button class="drop-btn">
+                        <p>Youtube Tools</p>
+                        <img src="/arrow.svg" alt="arrow down image">
+                     </button>
                      <ul class="dropdown-content">
                         <li>
                            <a href="#">Youtube video Downloader</a>
@@ -43,21 +49,11 @@
                      </ul>
                   </div>
                   <div class="dropdown">
-                     <button class="drop-btn">Facebook Tools</button>
-                     <ul class="dropdown-content">
-                        <li>
-                           <a href="#">Story Downloader</a>
-                        </li>
-                        <li>
-                           <a href="#">Photo Downloader</a>
-                        </li>
-                        <li>
-                           <a href="#">Video Downloader</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="dropdown">
-                     <button class="drop-btn">Tiktok Tools</button>
+                     <button class="drop-btn">
+                        <p>Tiktok Tools</p>
+                        <img src="/arrow.svg" alt="arrow down icon image">
+                     </button>
+                     
                      <ul class="dropdown-content">
                         <li>
                            <a href="#">Story Downloader</a>
@@ -79,13 +75,11 @@
          <div class="container">
             <div class="content__itm">
                <div class="hero">
-                  <div class="ad-box">
-                  </div>
                   
                   <div class="download-section">
-                     <h1>Instagram Post Download</h1>
+                     <h1>Youtube video Download</h1>
    
-                     <form class="form" action="/instagram/post" method="POST">
+                     <form class="form" action="/" method="POST">
                         <label hidden for="link">Link</label>
                         <input required class="input" type="url" placeholder="Paste your video link  here" id="link" name="link">
                         <button class="btn-submit" type="submit">Download</button>
@@ -93,24 +87,43 @@
                      <div class="guide">
                         <a class="guide-link" href="#">How to download</a>
                      </div>
-                     <% if(data) { %>
-                        <div class="video-box">
-                           <video width="270" height="480" controls >
-                              <source src=" <%= data %> ">
-                           </video>
-                           <a target="_blank" download class="save-btn" href=" <%= data %> ">Download</a>
-                        </div>
-                     <% } %> 
 
-                  </div>
-                  <div class="ad-box">
-                  </div>
+
                      
-               </div>
+                     <% if (video) { %>
+                        <div class="video-download-box1">
+                           <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 25px;" class="video-frame">
+                              <iframe style="margin: 0 auto;" width="450" height="250"  src="https://www.youtube.com/embed/<%= id %> " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           </div>
+                           <table class="table-content">
+                              <tr>
+                                 <th>No</th>
+                                 <th>Quality</th>
+                                 <th>Download</th>
+                              </tr>
+                              <% video.forEach((e,i) => { %>
+                                 <tr>
+                                    <td> <%= i+1 %> </td>
+                                    <td><%= e.qualityLabel %></td>
+                                    <td><a class="button-8" href=" <%= e.url %>">Download</a></td>
+                                 </tr>
+                              <% }) %> 
+                           </table>
+                           <% } %>
+                        </div>
 
-               <div class="index">
-                  <h2>How to download youtube video mp4</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
+                    
+                     
+                  </div>
+                  <!-- <ul>
+                     <li class="seo-section">
+                        <div class="heading-text">
+                           <h2>How to download youtube video mp4</h2>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
+                        </div>
+                        <img class="seo-img" width="355" src="/youtube-video.jpg" alt="youtube video download free">
+                     </li>
+                  </ul> -->
                </div>
             </div>
          </div>
