@@ -53,8 +53,9 @@ app.post('/',async(req,res) => {
          const videoId = await ytdl.getVideoID(link)
          console.log(videoId);
          const info = await  ytdl.getInfo(link)
+         console.log(info.formats);
          const video = info.formats.filter(v => {
-            if(v.mimeType.split(';')[0] == 'video/mp4') {
+            if(v.mimeType.split(';')[0] == 'video/mp4' && v.hasAudio == true) {
                return v;
             }
          })
