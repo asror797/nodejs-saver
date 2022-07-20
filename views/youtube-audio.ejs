@@ -14,59 +14,57 @@
             <div class="nav__itm">
                <a href="#" class="logo">Download-From</a>
                <div class="dropdowns">
-                  <div class="dropdowns">
-                     <div class="dropdown">
-                        <button class="drop-btn">
-                           <p>Instagram Tools</p>
-                           <img src="/arrow.svg" alt="down arrow icon image">
-                        </button>
-                        <ul class="dropdown-content">
-                           <li>
-                              <a href="#">Story Downloader</a>
-                           </li>
-                           <li>
-                              <a href="#">Post Downloader</a>
-                           </li>
-                           <li>
-                              <a href="#">Profile Photo Downloader</a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="dropdown">
-                        <button class="drop-btn">
-                           <p>Youtube Tools</p>
-                           <img src="/arrow.svg" alt="arrow down image">
-                        </button>
-                        <ul class="dropdown-content">
-                           <li>
-                              <a href="#">Youtube video Downloader</a>
-                           </li>
-                           <li>
-                              <a href="#">Photo Downloader</a>
-                           </li>
-                           <li>
-                              <a href="#">Video Downloader</a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="dropdown">
-                        <button class="drop-btn">
-                           <p>Tiktok Tools</p>
-                           <img src="/arrow.svg" alt="arrow down icon image">
-                        </button>
-                        
-                        <ul class="dropdown-content">
-                           <li>
-                              <a href="#">Story Downloader</a>
-                           </li>
-                           <li>
-                              <a href="#">Photo Downloader</a>
-                           </li>
-                           <li>
-                              <a href="#">Video Downloader</a>
-                           </li>
-                        </ul>
-                     </div>
+                  <div class="dropdown">
+                     <button class="drop-btn">
+                        <p>Instagram Tools</p>
+                        <img src="/arrow.svg" alt="down arrow icon image">
+                     </button>
+                     <ul class="dropdown-content">
+                        <li>
+                           <a href="#">Story Downloader</a>
+                        </li>
+                        <li>
+                           <a href="#">Post Downloader</a>
+                        </li>
+                        <li>
+                           <a href="#">Profile Photo Downloader</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="dropdown">
+                     <button class="drop-btn">
+                        <p>Youtube Tools</p>
+                        <img src="/arrow.svg" alt="arrow down image">
+                     </button>
+                     <ul class="dropdown-content">
+                        <li>
+                           <a href="#">Youtube video Downloader</a>
+                        </li>
+                        <li>
+                           <a href="#">Photo Downloader</a>
+                        </li>
+                        <li>
+                           <a href="#">Video Downloader</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="dropdown">
+                     <button class="drop-btn">
+                        <p>Tiktok Tools</p>
+                        <img src="/arrow.svg" alt="arrow down icon image">
+                     </button>
+                     
+                     <ul class="dropdown-content">
+                        <li>
+                           <a href="#">Story Downloader</a>
+                        </li>
+                        <li>
+                           <a href="#">Photo Downloader</a>
+                        </li>
+                        <li>
+                           <a href="#">Video Downloader</a>
+                        </li>
+                     </ul>
                   </div>
                </div>
                <button class="menu-btn"><img src="/menu.svg" alt="menu image"></button>
@@ -77,48 +75,91 @@
          <div class="container">
             <div class="content__itm">
                <div class="hero">
-                  <div class="ad-box">
-                  </div>
                   
                   <div class="download-section">
-                     <h1>Youtube audio of video Download</h1>
+                     <h1>Youtube to mp3  Converter</h1>
    
                      <form class="form" action="/youtube/mp3" method="POST">
                         <label hidden for="link">Link</label>
-                        <input required class="input" type="url" placeholder="Paste your video link  here" id="link" name="link">
+                        <input required class="input" type="url" <% if (link)  { %>  value=<%= link %>  <% } %>placeholder="Paste your video link  here" id="link" name="link">
                         <button class="btn-submit" type="submit">Download</button>
                      </form>
                      <div class="guide">
                         <a class="guide-link" href="#">How to download</a>
                      </div>
 
-                     <ul>
-                        <% if (audio) { %>
-                           <% audio.forEach(e => { %>
-                              <li>
-                                 <form action=" <%= e.url %>" method="post">
-                                 
-                                 </form>
-                                 <a download="<%= e.url %> " href=" <%= e.url  %> ">Download</a> 
-                                 <p> <%= e.qualityLabel %> </p>
-                              </li>
-                          <% }) %> 
-                         <% } %>
+                     <div class="social-medias">
+                        <a href="#" class="media-box">
+                           <img src="/tiktok.png" alt="tiktok">
+                           <p>Tiktok</p>
+                        </a>
+                        <a href="#" class="media-box">
+                           <img src="/facebook.png" alt="tiktok">
+                           <p>Facebook</p>
+                        </a>
+                        <a href="#" class="media-box">
+                           <img src="/instagram.png" alt="tiktok">
+                           <p>Instagram</p>
+                        </a>
+                        <a href="#" class="media-box">
+                           <img src="/youtube.png" alt="tiktok">
+                           <p>Youtube</p>
+                        </a>
+                     </div>
 
-                     </ul>
-                     <ul>
-                        <li class="seo-section">
-                           <div class="heading-text">
-                              <h2>How to download youtube video mp4</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
+
+                     
+                     <% if (audio) { %>
+                        <div class="video-download-box">
+                           <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 25px;" class="iframe-container">
+                              <iframe style="margin: 0 auto;" width="450" height="250"  src="https://www.youtube.com/embed/<%= id %>  " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                            </div>
-                           <img width="355" src="/youtube-video.jpg" alt="youtube video download free">
-                        </li>
-                     </ul>
+                          
+                           <table class="table-content">
+                              <tr>
+                                 <th>No</th>
+                                 <th>Format</th>
+                                 <th>Download</th>
+                              </tr>
+                              <% audio.forEach((e,i) => { %>
+                                 <tr>
+                                    <td> <%= i+1 %> </td>
+                                    <td> <%= e.container %> </td>
+                                    <td><a download target="blank" class="button-8" href=" <%= e.url %>">Download</a></td>
+                                 </tr>
+                              <% }) %> 
+                           </table>
+                           <% } %>
+                        </div>
+
                   </div>
-                  <div class="ad-box">
-                  </div>
+                  <ul class="list-seo">
+                     <li class="seo-section">
+                        <div class="heading-text">
+                           <h2>How to download youtube video mp4</h2>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
+                        </div>
+                        <img class="seo-img" width="355" src="/youtube-audio.jpeg" alt="youtube video download free">
+                     </li>
+                     <li class="seo-section-reverse">
+                        <div class="heading-text">
+                           <h2>How to download youtube video mp4</h2>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
+                        </div>
+                        <img class="seo-img" width="355" src="/youtube-audio.jpeg" alt="youtube video download free">
+                     </li>
+                     <li class="seo-section">
+                        <div class="heading-text">
+                           <h2>How to download youtube video mp4</h2>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
+                        </div>
+                        <img class="seo-img" width="355" src="/youtube-audio.jpeg" alt="youtube video download free">
+                     </li>
+                  </ul>
+                  
                </div>
+
+               
             </div>
          </div>
       </content>
