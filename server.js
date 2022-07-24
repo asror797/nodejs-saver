@@ -29,12 +29,12 @@ app.use(express.json())
 
 
 
-app.get('/',(_,res)=> {
+app.get('/youtube',(_,res)=> {
    res.render('yt' , {video:null})
 })
 
 
-app.post('/',async(req,res) => {
+app.post('/youtube',async(req,res) => {
       const { link } = req.body
       try {
          const videoId = ytdl.getVideoID(link)
