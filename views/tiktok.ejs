@@ -69,9 +69,9 @@
                <div class="hero">
                   
                   <div class="download-section">
-                     <h1>Youtube video Download</h1>
+                     <h1>Tiktok video Download</h1>
    
-                     <form class="form" action="/" method="POST">
+                     <form class="form" action="/tiktok" method="POST">
                         <label hidden for="link">Link</label>
                         <input required class="input" type="url" placeholder="Paste your video link  here" id="link" name="link">
                         <button class="btn-submit" type="submit">Download</button>
@@ -81,28 +81,11 @@
                      </div>
                      <% if (video) { %>
                         <div class="video-download-box">
-                           <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 25px;" class="iframe-container">
-                              <iframe style="margin: 0 auto;" width="450" height="250"  src="https://www.youtube.com/embed/<%= id %> " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                           </div>
-                          
-                           <table class="table-content">
-                              <tr>
-                                 <th>No</th>
-                                 <th>Quality</th>
-                                 <th>Format</th>
-                                 <th>Download</th>
-                              </tr>
-                              <% video.forEach((e,i) => { %>
-                                 <tr>
-                                    <td> <%= i+1 %> </td>
-                                    <td><%= e.qualityLabel %></td>
-                                    <td> <%= e.container %> </td>
-                                    <td><a download target="blank" class="button-8" href=" <%= e.url %>">Download</a></td>
-                                 </tr>
-                              <% }) %> 
-                           </table>
-                        </div>
+                           <video style="margin: 0 auto;" width="275" controls>
+                              <source src=" <%= video[0] %> ">
+                           </video>
                      <% } %>
+                        </div>
 
                      <div class="social-medias">
                         <a href="#" class="media-box">
@@ -130,14 +113,14 @@
                   <ul class="list-seo">
                      <li class="seo-section">
                         <div class="heading-text">
-                           <h2>How to download youtube video mp4</h2>
+                           <h2>How to download video without watermarks from tiktok</h2>
                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
                         </div>
                         <img class="seo-img" width="355" src="/youtube-video.jpg" alt="youtube video download free">
                      </li>
                      <li class="seo-section-reverse">
                         <div class="heading-text">
-                           <h2>Youtube video converter</h2>
+                           <h2>tiktok video downloader</h2>
                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ullam nostrum quam quibusdam quia assumenda similique placeat harum, fugit necessitatibus impedit qui saepe exercitationem pariatur!</p>
                         </div>
                         <img class="seo-img" width="355" src="/youtube-video.jpg" alt="youtube video download free">

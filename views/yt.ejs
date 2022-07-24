@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Youtube video download tool</title>
+   <meta name="description" content=" " />
+   
+   <!-- meta tags -->
+   <meta property="og:url" content="https://download-from/youtube/video">
+   <meta property="og:title" content="Free Photo Downloader for Instagram — Save Content Quickly">
+   <meta name="og:description" content="Download images from Instagram in a couple of clicks. No registration and fee.">
+   
+   <link rel="stylesheet" href="/sstyle.css">
+
+</head>
+<body>
+   <header class="header">
+      <div class="container">
+         <div class="header__itm">
+            <a href="http://54.147.124.210:9000/" class="logo">Downloader</a>
+            <ul class="dropdowns">
+               <li class="dropdown">
+                  <span class="drop-btn">
+                     Youtube tools <img width="25" src="./arrow.svg" alt="instagram">
+                  </span>
+                  <div class="dropdown-content">
+                     <a href="#">Youtube video downloader</a>
+                     <a href="#">Youtube mp3 converter</a>
+                  </div>
+               </li>
+               <li class="dropdown">
+                  <span class="drop-btn">
+                     Instagram tools <img width="25" src="./arrow.svg" alt="Facebook">
+                  </span>
+                  <div class="dropdown-content">
+                     <a href="#">Instagram post download</a>
+                     <a href="#">Instagram story</a>
+                     <a href="#">Instagram reels download</a>
+                  </div>
+               </li>
+               <li class="dropdown">
+                  <span class="drop-btn">
+                     Facebook tools <img width="25" src="./arrow.svg" alt="Facebook">
+                  </span>
+                  <div class="dropdown-content">
+                     <a href="#">Facebook video downloader</a>
+                  </div>
+               </li>
+               <li class="dropdown">
+                  <span class="drop-btn">
+                     Tiktok tools <img width="25" src="./arrow.svg" alt="Facebook">
+                  </span>
+                  <div class="dropdown-content">
+                     <a href="#">tiktok video downloader</a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </header>
+
+   <div class="content">
+      <div class="container">
+         <div class="content__itm">
+            <main class="main">
+               <section class="form-section">
+                  <div class="heading">
+                     <div class="heading-content">
+                        <h1>Youtube video download</h1>
+                        <div class="img-heading">
+                           <img width="37" src="/download.svg" alt="Youtube video downloader online">
+                        </div>
+                     </div>
+                     <p class="heading-paragraph">Online youtube video download.  -domain- allowing to download video from youtube </p>
+                  </div>
+                  <form action="/" method="POST">
+                     <label hidden for="link">Url</label>
+                     <input name="link" id="link" type="url" placeholder="Paste your link here">
+                     <button type="submit">Download</button>
+                  </form>
+               </section>
+
+               <% if (video) { %>
+                  <div class="video-download-box">
+                     <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 25px;" class="iframe-container">
+                        <iframe style="margin: 0 auto;" width="450" height="250"  src="https://www.youtube.com/embed/<%= id %> " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     </div>
+                    
+                     <table class="table-content">
+                        <tr>
+                           <th>No</th>
+                           <th>Quality</th>
+                           <th>Format</th>
+                           <th>Download</th>
+                        </tr>
+                        <% video.forEach((e,i) => { %>
+                           <tr>
+                              <td> <%= i+1 %> </td>
+                              <td><%= e.qualityLabel %></td>
+                              <td> <%= e.container %> </td>
+                              <td><a download target="blank" class="button-8" href=" <%= e.url %>">Download</a></td>
+                           </tr>
+                        <% }) %> 
+                     </table>
+                  </div>
+               <% } %>
+
+               <article class="article-content">
+                  <section>
+                     <div class="article-heading">
+                        <h2>How to download youtube videos online</h2>
+                        <ol>
+                           <li>Find the YouTube video you want downloaded. Copy the URL.</li>
+                           <li>You can paste the video URL in the in input field </li>
+                           <li>Click on the download button and it will show dtable with formats</li>
+                        </ol>
+                     </div>
+                     <div class="img-article">
+                        <img width="395" src="/youtube-video.jpg" alt="youtube video download">
+                     </div>
+                  </section>
+                  <section class="reverse-box">
+                     <div class="article-heading">
+                        <h2>How to download youtube videos in mp4 </h2>
+                        <ol>
+                           <li>Go to the YouTube video you want to convert mp4</li>
+                           <!-- <li>If you want to download videos on your desktop for free, -domain- is the best tool</li> -->
+                           <li>Copy and paste the URL for a YouTube video</li>
+                           <li>Choose the resolution and start downloading</li>
+                        </ol>
+                     </div>
+                     <div class="img-article">
+                        <img width="395" src="/youtube-mp4.png" alt="youtube video download">
+                     </div>
+                  </section>
+
+                  <!-- <section>
+                     <div class="article-heading">
+                        <h2>YouTube to mp4 thi sin jo cdmlvn; nek</h2>
+                        <ol>
+                           <li>Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
+                           <li>Lorem ipsum dolor sit amet.</li>
+                           <li>lorem8</li>
+                        </ol>
+                     </div>
+                     <div class="img-article">
+                        <img width="395" src="./youtube.jpg" alt="youtube video download">
+                     </div>
+                  </section> -->
+
+               </article>
+               
+            </main>
+         </div>
+      </div>
+   </div>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="footer__itm">
+            <p>Downloader</p>
+            <ul>
+               <li>
+                  <a href="#">instagram story downloader</a>
+               </li>
+               <li>
+                  <a href="#">instagram post download</a>
+               </li>
+            </ul>
+            <ul>
+               <li>
+                  <a href="#">youtube video download</a>
+               </li>
+               <li>
+                  <a href="#">youtube mp3 converter</a>
+               </li>
+            </ul>
+            <ul>
+               <li>
+                  <a href="#">tiktok video download</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </footer>
+
+</body>
+</html>

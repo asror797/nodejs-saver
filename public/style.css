@@ -399,6 +399,12 @@ body {
       padding: 12px ;
    }
 
+   .social-medias {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
    .seo-section {
       width: 100%;
       display: flex;
@@ -442,6 +448,20 @@ body {
    }
    .dropdowns {
       display: none;
+   }
+
+   .social-medias {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .media-box {
+      margin-bottom: 25px;
+   }
+
+   .content__itm {
+      margin: 25px 0;
    }
 
    .menu-btn {

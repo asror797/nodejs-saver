@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const ytdl = require('ytdl-core')
-// const Tiktok = require('tiktok-downloader')
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.static(path.join(__dirname, 'public')));
@@ -11,18 +10,18 @@ app.use(express.json())
 
 
 
-app.get('/instagram/post',(_,res) => {
-   res.render('instagram-post',{data:null})
-})
+// app.get('/instagram/post',(_,res) => {
+//    res.render('instagram-post',{data:null})
+// })
 
 
-app.post('/instagram/post',async(req,res) => {
+// app.post('/instagram/post',async(req,res) => {
 
-   const { link } = req.body
+//    const { link } = req.body
 
-   res.send('ok')
+//    res.send('ok')
 
-})
+// })
 
 
 
@@ -31,7 +30,7 @@ app.post('/instagram/post',async(req,res) => {
 
 
 app.get('/',(_,res)=> {
-   res.render('youtube-video' , {video:null})
+   res.render('yt' , {video:null})
 })
 
 
@@ -44,13 +43,17 @@ app.post('/',async(req,res) => {
             if(v.mimeType.split(';')[0] == 'video/mp4' && v.hasAudio == true) return v;
          })
 
-         res.render('youtube-video',{video , id:videoId})
+         res.render('yt',{video , id:videoId})
 
       } catch (error) {
          res.sendStatus(500)
       }
       
 
+})
+
+app.get('/*',(_,res) => {
+   res.sendStatus(404)
 })
 
 
@@ -81,23 +84,46 @@ app.get('/facebook',(_,res) => {
 app.post('/facebook',(req,res) => {
    const { link } = req.body
 
-   // const tiktok = new Tiktok('https://www.tiktok.com/@_..any_/video/7084702408936312070')
-
-   // tiktok.get()
-   //    .then(data => {
-   //       console.log(data)
-   //    })
-   //    .catch(err => {
-   //       console.log(err);
-   //    })
+  
    
 })
 
 
-
-app.get('/*',(_,res) => {
-   res.sendStatus(404)
+app.get('/tiktok',async(_,res) => {
+   
+   res.render('tiktok',{video:null})
 })
+
+
+app.post('/tiktok',async(req,res) => {
+   const { link } = req.body
+   
+   const options = {
+      method: 'GET',
+      headers: {
+         'X-RapidAPI-Key': '65a5981e76msh2f4163b0efa1df2p12ba9cjsn7de83ce964a2',
+         'X-RapidAPI-Host': 'tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com'
+      }
+   };
+   
+   fetch(`https://tiktok-downloader-download-tiktok-videos-without-watermark.p.rapidapi.com/vid/index?url=${link}`, options)
+   .then(response => response.json())
+   .then(response =>{
+      console.log(response);
+      res.render('tiktok',{video:response.video})
+   })
+   .catch(err => {
+      console.error(err)
+      res.sendStatus(500)
+   });
+   
+})
+
+
+// app.get('/*',(_,res) => {
+//    res.sendStatus(404)
+// })
+
 
 
 // /*  Instagram Media Download  */
