@@ -52,10 +52,6 @@ app.post('/youtube',async(req,res) => {
 
 })
 
-app.get('/*',(_,res) => {
-   res.sendStatus(404)
-})
-
 
 app.get('/youtube/mp3',(_,res)=> {
    res.render('youtube-audio',{audio:null , link:null})
@@ -73,6 +69,12 @@ app.post('/youtube/mp3',async(req,res) => {
    })
    res.render('youtube-audio',{audio,id:videoId,link:link})
 })
+
+
+app.get('/*',(_,res) => {
+   res.sendStatus(404)
+})
+
 
 
 

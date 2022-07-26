@@ -293,6 +293,12 @@ body {
       padding: 0 15px;
    }
 
+   .footer__itm {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
       
 
 }
@@ -312,6 +318,10 @@ body {
 
    .content__itm {
       padding: 5px 0;
+   }
+   .footer__itm {
+      display: flex;
+      flex-wrap: wrap;
    }
 
    
